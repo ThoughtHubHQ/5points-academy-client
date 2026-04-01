@@ -217,7 +217,7 @@ export default function Footer() {
 
               <div className="flex flex-col justify-center">
                 <span className="text-[10px] uppercase tracking-widest text-neutral-500 font-medium leading-none mb-1">
-                  Engineered by
+                  Crafted by
                 </span>
                 <span className="flex flex-col text-lg font-bold text-[#e7eacd]">
                   <span>ThoughtHub</span>
