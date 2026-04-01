@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { inter } from "@/lib/font";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import Header from "@/components/custom/Header/Header";
+import Footer from "@/components/custom/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "5points Academy - Your Education Partner in Bangladesh",
@@ -40,8 +42,12 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning className={inter.className}>
       <body className="font-sans antialiased">
         <Toaster position="bottom-right" swipeDirections={["right"]} />
-        <main className="grow">
-          <TooltipProvider>{children}</TooltipProvider>
+        <main className="grow bg-[#070a0a]">
+          <TooltipProvider>
+            <Header />
+            {children}
+            <Footer/>
+          </TooltipProvider>
         </main>
       </body>
     </html>
