@@ -64,10 +64,11 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl">
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-4 lg:gap-16">
+
           {/* Column 1: Branding */}
           <div className="flex flex-col gap-8">
             <div className="flex items-center gap-2.5">
-              <Image src="/logo/logo.png" alt="Logo" width={150} height={40} />
+              <Image src="/logo/logo.png" alt="Logo" width={150} height={40} className="rounded-lg"/>
             </div>
             <p className="text-[14px] leading-[22.75px] text-slate-500">
               The most trusted education platform for
@@ -76,6 +77,8 @@ export default function Footer() {
               <br className="hidden md:block" />
               academic and competitive exams.
             </p>
+
+            {/* Social Media Links */}
             <div className="flex gap-4">
               {footerData.socials.map((social, index) => (
                 <Link

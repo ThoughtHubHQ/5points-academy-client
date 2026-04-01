@@ -30,7 +30,7 @@ export default function Header() {
       <div className="flex justify-between items-center">
         {/* Logo */}
         <div className="relative z-10">
-          <Image src="/logo/logo.png" alt="Logo" width={100} height={100} priority className="w-auto h-auto" />
+          <Image src="/logo/logo.png" alt="Logo" width={100} height={100} priority className="w-auto h-auto rounded-lg" />
         </div>
 
         {/* Desktop Navigation */}
@@ -46,7 +46,7 @@ export default function Header() {
                       href={item.href}
                       className={`relative font-medium transition-colors duration-300 py-1 
                         ${isActive ? "text-white" : "text-[#94a3b8] hover:text-white"}
-                        after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-full after:origin-left after:transition-transform after:duration-300 after:ease-in-out after:bg-[#139889]
+                        after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:origin-left after:transition-transform after:duration-300 after:ease-in-out after:bg-[#139889]
                         ${isActive ? "after:scale-x-100" : "after:scale-x-0 hover:after:scale-x-100"}
                       `}
                     >
@@ -92,14 +92,8 @@ export default function Header() {
             
             <SheetContent 
               side="right" 
-              className="w-[85vw] max-w-[320px] bg-[#060e0d]/95 backdrop-blur-xl border-l border-white/5 p-6 flex flex-col shadow-[-20px_0_40px_-10px_rgba(255,255,255,0.05)] [&>button]:text-[#94a3b8] hover:[&>button]:text-white [&>button]:transition-colors"
+              className="w-[85vw] max-w-[320px] bg-[#060e0d]/95 backdrop-blur-xl border-l border-white/5 px-6 py-15 flex flex-col shadow-[-20px_0_40px_-10px_rgba(255,255,255,0.05)] [&>button]:text-[#94a3b8] hover:[&>button]:text-white [&>button]:transition-colors"
             >
-              <SheetHeader className="text-left mb-8 mt-2">
-                <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
-                <div>
-                  <Image src="/logo/logo.png" alt="Logo" width={80} height={80} className="w-auto h-auto" />
-                </div>
-              </SheetHeader>
 
               {/* Minimal Mobile Links */}
               <nav className="flex flex-col gap-3 flex-1">
