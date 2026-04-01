@@ -9,7 +9,6 @@ import Footer from "@/components/custom/Footer/Footer";
 export const metadata: Metadata = {
   title: "5points Academy - Your Education Partner in Bangladesh",
   description: "The Best Coaching Center in Mohammadpur, Dhaka, Bangladesh",
-  manifest: "/manifest.json",
   openGraph: {
     title: "5points Academy - Your Education Partner in Bangladesh",
     description: "The Best Coaching Center in Mohammadpur, Dhaka, Bangladesh",
@@ -18,7 +17,7 @@ export const metadata: Metadata = {
     siteName: "5points Academy",
     images: [
       {
-        url: "/sociamediapreview.jpg",
+        url: "/logo/logo/png",
         width: 1200,
         height: 630,
         alt: "5points Academy – The Best Coaching Center in Bangladesh",
@@ -29,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "5points Academy - Your Education Partner in Bangladesh",
     description: "The Best Coaching Center in Mohammadpur, Dhaka, Bangladesh",
-    images: ["/sociamediapreview.jpg"],
+    images: ["/logo/logo.png"],
   },
 };
 
