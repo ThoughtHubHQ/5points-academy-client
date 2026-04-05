@@ -1,3 +1,5 @@
+import CTA from "./_sections/CTA";
+import FAQ from "./_sections/FAQ";
 import Hero from "./_sections/Hero";
 import HeroImage from "./_sections/HeroImage";
 import MentoringStudents from "./_sections/MentoringStudents";
@@ -18,6 +20,8 @@ export default function Home() {
       <TeachersPanel />
       <WhyChooseUs />
       <SuccessStory />
+      <FAQ />
+      <CTA/>
     </div>
   );
 }
