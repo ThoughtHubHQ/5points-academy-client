@@ -2,6 +2,7 @@ import Hero from "./_sections/Hero";
 import HeroImage from "./_sections/HeroImage";
 import MentoringStudents from "./_sections/MentoringStudents";
 import OurCourses from "./_sections/OurCourses";
+import TopCourses from "./_sections/TopCourses";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <HeroImage />
       <MentoringStudents />
       <OurCourses />
+      <TopCourses/>
     </div>
   );
 }
