@@ -63,18 +63,19 @@ export default function Footer() {
   return (
     <footer className="w-full border-t border-white/5 bg-[#0A0A0A] px-6 pt-24 pb-12 text-slate-400 sm:px-10 lg:px-20">
       <div className="mx-auto max-w-7xl">
-        {/* Main Content Grid */}
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-4 lg:gap-16">
-          {/* Column 1: Branding */}
+          {/* Branding */}
           <div className="flex flex-col gap-8">
             <div className="flex items-center gap-2.5">
-              <Image
-                src="/logo/logo.png"
-                alt="Logo"
-                width={150}
-                height={40}
-                className="rounded-lg"
-              />
+              <Link href="/">
+                <Image
+                  src="/logo/logo.png"
+                  alt="Logo"
+                  width={150}
+                  height={40}
+                  className="rounded-lg"
+                />
+              </Link>
             </div>
             <p className="text-[14px] leading-[22.75px] text-slate-500">
               The most trusted education platform for
@@ -101,7 +102,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 2: Quick Links */}
+          {/* Quick Links */}
           <div className="flex flex-col gap-8">
             <h3 className="text-[16px] font-medium leading-6 text-white">
               Quick Links
@@ -120,7 +121,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Popular Courses */}
+          {/* Popular Courses */}
           <div className="flex flex-col gap-8">
             <h3 className="text-[16px] font-medium leading-6 text-white">
               Popular Courses
@@ -139,7 +140,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 4: Contact */}
+          {/* Contact */}
           <div className="flex flex-col gap-8">
             <h3 className="text-[16px] font-medium leading-6 text-white">
               Contact Us
@@ -204,8 +205,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-slate-300 text-center md:text-left mb-4 md:mb-0">
-            © {new Date().getFullYear()} - 5points Academy | All rights
-            reserved
+            © {new Date().getFullYear()} - 5points Academy | All rights reserved
           </p>
 
           {/* Credit: ThoughtHub */}
