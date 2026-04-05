@@ -2,7 +2,6 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { inter } from "@/lib/font";
 import { Toaster } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
 import Header from "@/components/custom/Header/Header";
 import Footer from "@/components/custom/Footer/Footer";
 
@@ -40,14 +39,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={inter.className}>
       <body className="font-sans antialiased">
-        <Toaster position="bottom-right" swipeDirections={["right"]} />
-        <main className="grow bg-[#070a0a]">
-          <TooltipProvider>
+    
+          <Toaster position="bottom-right" swipeDirections={["right"]} />
+          <main className="grow bg-[#070a0a]">
             <Header />
             {children}
-            <Footer/>
-          </TooltipProvider>
-        </main>
+            <Footer />
+          </main>
       </body>
     </html>
   );

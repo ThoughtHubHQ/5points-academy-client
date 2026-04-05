@@ -8,6 +8,7 @@ import {
   FaLinkedinIn,
   FaYoutube,
 } from "react-icons/fa";
+import CraftingCredit from "@/components/ui/crafting-credit";
 
 const footerData = {
   quickLinks: [
@@ -35,12 +36,12 @@ const footerData = {
       href: "https://www.facebook.com/5pointsAcademy",
       color: "#106aff",
     },
-      {
+    {
       icon: FaFacebookMessenger,
       href: "https://m.me/5pointsAcademy",
       color: "#106bff",
     },
-      {
+    {
       icon: FaWhatsapp,
       href: "https://wa.me/01794744343",
       color: "#2cd46b",
@@ -64,11 +65,16 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl">
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-4 lg:gap-16">
-
           {/* Column 1: Branding */}
           <div className="flex flex-col gap-8">
             <div className="flex items-center gap-2.5">
-              <Image src="/logo/logo.png" alt="Logo" width={150} height={40} className="rounded-lg"/>
+              <Image
+                src="/logo/logo.png"
+                alt="Logo"
+                width={150}
+                height={40}
+                className="rounded-lg"
+              />
             </div>
             <p className="text-[14px] leading-[22.75px] text-slate-500">
               The most trusted education platform for
@@ -86,7 +92,10 @@ export default function Footer() {
                   href={social.href}
                   className="flex h-9 w-9 items-center justify-center rounded-full bg-white/5 transition-colors hover:bg-white/10"
                 >
-                  <social.icon className="h-4.5 w-4.5" style={{ color: social.color }} />
+                  <social.icon
+                    className="h-4.5 w-4.5"
+                    style={{ color: social.color }}
+                  />
                 </Link>
               ))}
             </div>
@@ -195,36 +204,12 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-slate-300 text-center md:text-left mb-4 md:mb-0">
-            © {new Date().getFullYear()} - 5points Academy | All rights reserved.
+            © {new Date().getFullYear()} - 5points Academy | All rights
+            reserved
           </p>
 
           {/* Credit: ThoughtHub */}
-          <a
-            href="https://thoughthubhq.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div className="group relative flex items-center gap-4 text-xs tracking-tight sm:text-sm cursor-pointer hover:scale-110 transition-transform duration-500 after:content-[''] after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-500 after:ease-in-out after:bg-[#e7eacd]">
-              <div className="shrink-0 pr-4 border-r border-neutral-200 transition-colors duration-300">
-                <Image
-                  src="/logo/th-logo.png"
-                  alt="ThoughtHub HQ Logo"
-                  width={36}
-                  height={36}
-                  priority
-                />
-              </div>
-
-              <div className="flex flex-col justify-center">
-                <span className="text-[10px] uppercase tracking-widest text-neutral-500 font-medium leading-none mb-1">
-                  Crafted by
-                </span>
-                <span className="flex flex-col text-lg font-bold text-[#e7eacd]">
-                  <span>ThoughtHub</span>
-                </span>
-              </div>
-            </div>
-          </a>
+          <CraftingCredit />
         </div>
       </div>
     </footer>
