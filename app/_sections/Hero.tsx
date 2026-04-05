@@ -1,7 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CirclePlay, Dot } from "lucide-react";
-import Image from "next/image";
 
 const statData = [
   { label: "Success Rate", value: "95%" },

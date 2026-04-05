@@ -24,8 +24,8 @@ export default function MentoringStudents() {
         <div className="relative space-y-4 md:space-y-5 z-10">
           <div className="absolute top-25 -right-1/2 -translate-x-1/2 -translate-y-1/2 w-62.5 md:w-87.5 h-62.5 md:h-87.5 rounded-full bg-[rgba(13,148,136,0.15)] blur-[70px] -z-10 pointer-events-none"></div>
 
-          <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold">
-            Mentoring Student for{" "}
+          <h1 className="text-white text-2xl md:text-4xl font-bold">
+            Mentoring Student for{" "} <br />
             <span className="text-[#2dd4bf]">Over 10 Years</span>
           </h1>
           <p className="text-[#2dd4bf] mt-4 text-sm md:text-base leading-relaxed">

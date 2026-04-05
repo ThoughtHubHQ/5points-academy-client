@@ -72,7 +72,7 @@ export default function OurCourses() {
         {/* Button */}
         <Button
           variant="outline"
-          className="w-full md:w-auto border-2 border-[#232727] px-3 py-5 bg-[#0a100f] hover:bg-[#1d302e] hover:text-white rounded-lg text-white flex items-center justify-center gap-2"
+          className="hidden w-full md:w-auto border-2 border-[#232727] px-3 py-5 bg-[#0a100f] hover:bg-[#1d302e] hover:text-white rounded-lg text-white lg:flex items-center justify-center gap-2"
         >
           View All Programs <ArrowUpRight />
         </Button>
@@ -125,6 +125,12 @@ export default function OurCourses() {
           </Card>
         ))}
       </div>
+          <Button
+          variant="outline"
+          className="md:hidden w-full border-2 border-[#232727] my-5 px-3 py-5 bg-[#0a100f] hover:bg-[#1d302e] hover:text-white rounded-lg text-white flex items-center justify-center gap-2"
+        >
+          View All Programs <ArrowUpRight />
+        </Button>
     </div>
   );
 }
