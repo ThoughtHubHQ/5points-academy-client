@@ -10,7 +10,7 @@ import Link from "next/link";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname(); // Get the current route
+  const pathname = usePathname(); 
 
   const navItems = [
     { name: "Home", href: "/" },
@@ -20,8 +20,7 @@ export default function Header() {
   ];
 
   return (
-    <div className="bg-[#070a0a]">
-      <div className="mx-auto max-w-360 px-6 md:px-12 lg:px-20 py-5.5">
+      <div className="mx-auto px-6 md:px-12 lg:px-20 2xl:px-24 py-5.5 sticky top-0 left-0 right-0 z-50 backdrop-blur-xl bg-[#070a0a]/75">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="relative z-10">
@@ -87,7 +86,7 @@ export default function Header() {
                   size="icon"
                   className="text-[#94a3b8] hover:text-white hover:bg-white/5 transition-colors"
                 >
-                  <Menu className="h-7 w-7" />
+                  <Menu className="h-10 w-10"/>
                   <span className="sr-only">Toggle menu</span>
                 </Button>
               </SheetTrigger>
@@ -147,6 +146,5 @@ export default function Header() {
           </div>
         </div>
       </div>
-    </div>
   );
 }

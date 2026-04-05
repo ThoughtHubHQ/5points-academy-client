@@ -6,8 +6,8 @@ export default function HeroImage() {
       <Image
         src="/herobg.jpg"
         alt="Hero Image"
-        width={800}
-        height={600}
+        width={1536}
+        height={672}
         className="w-full max-w-360 mx-auto rounded-lg shadow-lg"
       />
     </div>
