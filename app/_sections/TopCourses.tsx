@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Book, Clock, FilePlay, Video } from "lucide-react";
+import { Book, Clock, FilePlay, RotateCw, Video } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -41,7 +41,7 @@ const courseData = [
 ];
 export default function TopCourses() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 mt-10">
       {courseData.map((course) => (
         <Card
           key={course.id}

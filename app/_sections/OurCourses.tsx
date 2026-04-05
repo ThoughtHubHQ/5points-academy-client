@@ -55,7 +55,7 @@ const gradeCard = [
 
 export default function OurCourses() {
   return (
-    <div className="mt-10 py-10 border-t border-[#152623]">
+    <div className="mt-10 lg:mt-20 py-10">
       <div className="flex flex-col md:flex-row w-full gap-6 justify-between items-center relative">
         {/* Background blob */}
         <div className="absolute right-1/3 w-150 h-150 rounded-full bg-[rgba(13,148,136,0.1)] blur-2xl"></div>

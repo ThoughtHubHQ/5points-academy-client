@@ -2,7 +2,10 @@ import Hero from "./_sections/Hero";
 import HeroImage from "./_sections/HeroImage";
 import MentoringStudents from "./_sections/MentoringStudents";
 import OurCourses from "./_sections/OurCourses";
+import SuccessStory from "./_sections/SuccessStory";
+import TeachersPanel from "./_sections/TeachersPanel";
 import TopCourses from "./_sections/TopCourses";
+import WhyChooseUs from "./_sections/WhyChooseUs";
 
 export default function Home() {
   return (
@@ -11,7 +14,10 @@ export default function Home() {
       <HeroImage />
       <MentoringStudents />
       <OurCourses />
-      <TopCourses/>
+      <TopCourses />
+      <TeachersPanel />
+      <WhyChooseUs />
+      <SuccessStory />
     </div>
   );
 }
