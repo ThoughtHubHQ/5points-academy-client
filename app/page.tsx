@@ -4,6 +4,7 @@ import Hero from "./_sections/Hero";
 import HeroImage from "./_sections/HeroImage";
 import MentoringStudents from "./_sections/MentoringStudents";
 import OurCourses from "./_sections/OurCourses";
+import ServicesProvided from "./_sections/ServicesProvided";
 import SuccessStory from "./_sections/SuccessStory";
 import TeachersPanel from "./_sections/TeachersPanel";
 import TopCourses from "./_sections/TopCourses";
@@ -17,11 +18,12 @@ export default function Home() {
       <MentoringStudents />
       <OurCourses />
       <TopCourses />
+      <ServicesProvided />
       <TeachersPanel />
       <WhyChooseUs />
       <SuccessStory />
       <FAQ />
-      <CTA/>
+      <CTA />
     </div>
   );
 }

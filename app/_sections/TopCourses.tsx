@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Book, Clock, FilePlay, RotateCw, Video } from "lucide-react";
+import { Book, Clock, FilePlay, Video } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -20,7 +20,8 @@ const courseData = [
     basePrice: 5000,
     discountPrice: 3500,
     url: "/ssc-preparation",
-    bgClass: "bg-[#453454]/50",
+    bgClass:
+      "rounded-2xl border border-[#27272A] bg-[linear-gradient(135deg,rgba(10,10,10,0.9)_0%,rgba(10,10,10,0.7)_50%,rgba(19,78,74,0.4)_100%)]",
   },
   {
     id: 2,
@@ -36,20 +37,17 @@ const courseData = [
     basePrice: 8000,
     discountPrice: 6500,
     url: "/hsc-preparation",
-    bgClass: "bg-[#523142]/50",
+    bgClass:
+      "rounded-2xl border border-[#27272A] bg-[linear-gradient(135deg,rgba(10,10,10,0.9)_0%,rgba(10,10,10,0.7)_40%,rgba(124,45,18,0.4)_100%)]",
   },
 ];
 export default function TopCourses() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 mt-10">
       {courseData.map((course) => (
-        <Card
-          key={course.id}
-          className={` border-2 border-[#27272a] ${course.bgClass}`}
-        >
+        <Card key={course.id} className={`bg-[#0a2825] ${course.bgClass}`}>
           <Badge
-            className={`relative -right-4 uppercase font-semibold border border-orange-500 text-xs px-3 py-3 rounded-md 
-            text-[${course.bgClass}] text-orange-500 bg-${course.bgClass}`}
+            className={`relative -right-4 uppercase text-yellow-500 p-3 border border-yellow-500 rounded-md`}
           >
             {course.tag}
           </Badge>
@@ -64,7 +62,7 @@ export default function TopCourses() {
           </div>
           <CardContent>
             <h1 className="text-2xl font-bold text-white">{course.title}</h1>
-            <p className="text-[#a1a1aa] py-2">{course.description}</p>
+            <p className="max-w-md text-[#a1a1aa] py-2">{course.description}</p>
             <div className="flex justify-between items-center py-3">
               <div className="space-y-2">
                 <div className="flex items-center gap-1.5 text-muted-foreground">

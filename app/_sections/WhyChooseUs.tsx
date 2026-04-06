@@ -56,7 +56,7 @@ const reasons = [
 export default function WhyChooseUs() {
   return (
     <div>
-      <h1 className="text-white text-2xl md:text-4xl font-bold pb-10 pt-5 md:py-15 text-center">
+      <h1 className="text-white text-2xl md:text-4xl font-bold mt-7 md:mt-0 py-8 md:py-15 text-center">
         Why Choose Us
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

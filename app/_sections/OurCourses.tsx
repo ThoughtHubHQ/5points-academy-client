@@ -12,8 +12,9 @@ const gradeCard = [
     icon: "৬",
     coverImg: "/classimg.jpg",
     cta: "All Subjects",
-    bgClass: "bg-[#453454]/50",
-    iconBgClass: "bg-[#453454]/80",
+    bgClass: "rounded-2xl border border-[#27272A] bg-[rgba(168,85,247,0.05)]",
+    iconBgClass:
+      "rounded-[12px] bg-[rgba(168,85,247,0.2)] shadow-[0_10px_15px_-3px_rgba(168,85,247,0.1),0_4px_6px_-4px_rgba(168,85,247,0.1)]",
   },
   {
     id: 2,
@@ -21,8 +22,9 @@ const gradeCard = [
     icon: "৭",
     coverImg: "/classimg.jpg",
     cta: "All Subjects",
-    bgClass: "bg-[#523142]/50",
-    iconBgClass: "bg-[#523142]/80",
+    bgClass: "rounded-2xl border border-[#27272A] bg-[rgba(236,72,153,0.05)]",
+    iconBgClass:
+      "rounded-[12px] bg-[rgba(236,72,153,0.2)] shadow-[0_10px_15px_-3px_rgba(236,72,153,0.1),0_4px_6px_-4px_rgba(236,72,153,0.1)]",
   },
   {
     id: 3,
@@ -30,8 +32,9 @@ const gradeCard = [
     icon: "৮",
     coverImg: "/classimg.jpg",
     cta: "JSC Prep",
-    bgClass: "bg-[#553a27]/50",
-    iconBgClass: "bg-[#553a27]/80",
+    bgClass: "rounded-2xl border border-[#27272A] bg-[rgba(249,115,22,0.05)]",
+    iconBgClass:
+      "rounded-[12px] bg-[rgba(249,115,22,0.2)] shadow-[0_10px_15px_-3px_rgba(249,115,22,0.1),0_4px_6px_-4px_rgba(249,115,22,0.1)]",
   },
   {
     id: 4,
@@ -39,8 +42,9 @@ const gradeCard = [
     icon: "৯",
     coverImg: "/classimg.jpg",
     cta: "Sci / Com / Arts",
-    bgClass: "bg-[#274844]/50",
-    iconBgClass: "bg-[#274844]/80",
+    bgClass: "rounded-2xl border border-[#27272A] bg-[rgba(20,184,166,0.05)]",
+    iconBgClass:
+      "rounded-[12px] bg-[rgba(20,184,166,0.2)] shadow-[0_10px_15px_-3px_rgba(20,184,166,0.1),0_4px_6px_-4px_rgba(20,184,166,0.1)]",
   },
   {
     id: 5,
@@ -48,8 +52,9 @@ const gradeCard = [
     icon: "১০",
     coverImg: "/classimg.jpg",
     cta: "Pre Test Prep",
-    bgClass: "bg-[#24474d]/50",
-    iconBgClass: "bg-[#24474d]/80",
+    bgClass: "rounded-2xl border border-[#27272A] bg-[rgba(6,182,212,0.05)]",
+    iconBgClass:
+      "rounded-[12px] bg-[rgba(6,182,212,0.2)] shadow-[0_10px_15px_-3px_rgba(6,182,212,0.1),0_4px_6px_-4px_rgba(6,182,212,0.1)]",
   },
 ];
 
@@ -92,7 +97,7 @@ export default function OurCourses() {
         {gradeCard.map((grade) => (
           <Card
             key={grade.id}
-            className={`border-2 border-[#252f31] p-0 hover:bg-[#1d302e] ${grade.bgClass}`}
+            className={`p-0 hover:bg-[#1d302e] ${grade.bgClass}`}
           >
             {/* Image on top */}
             <div className="flex justify-center px-4 pt-4">
@@ -125,12 +130,12 @@ export default function OurCourses() {
           </Card>
         ))}
       </div>
-          <Button
-          variant="outline"
-          className="md:hidden w-full border-2 border-[#232727] my-5 px-3 py-5 bg-[#0a100f] hover:bg-[#1d302e] hover:text-white rounded-lg text-white flex items-center justify-center gap-2"
-        >
-          View All Programs <ArrowUpRight />
-        </Button>
+      <Button
+        variant="outline"
+        className="md:hidden w-full border-2 border-[#232727] my-5 px-3 py-5 bg-[#0a100f] hover:bg-[#1d302e] hover:text-white rounded-lg text-white flex items-center justify-center gap-2"
+      >
+        View All Programs <ArrowUpRight />
+      </Button>
     </div>
   );
 }

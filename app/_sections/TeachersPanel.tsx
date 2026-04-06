@@ -49,7 +49,7 @@ export default function TeachersPanel() {
   ];
 
   return (
-    <div className="mt-10 lg:mt-20 lg:mb-10">
+    <div className="mt-15 lg:mt-20 lg:mb-10">
       <h1 className="text-white text-2xl md:text-4xl font-bold pb-10 pt-5 md:py-15 text-center">
         Meet Our <br className="block md:hidden" />{" "}
         <span className="text-[#2dd4bf]">Expert Teachers Panel</span>
@@ -84,7 +84,7 @@ export default function TeachersPanel() {
         ))}
       </div>
 
-      <div className="text-center mt-10">
+      <div className="text-center mt-5 md:mt-10">
         <Link href="/our-teachers">
           <Button className="bg-[#09100e] border-[#1f2937] rounded-xl py-6 px-6 text-white font-bold w-full md:w-auto ">
             View More Teacher <RotateCw />
