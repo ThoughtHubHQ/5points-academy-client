@@ -1,3 +1,5 @@
+"use client";
+
 import { Card } from "@/components/ui/card";
 import {
   ChartSpline,
@@ -7,6 +9,8 @@ import {
   User,
   Users,
 } from "lucide-react";
+import { motion, Variants } from "framer-motion";
+import { containerVariants, itemVariants } from "@/lib/framer-animation";
 
 const reasons = [
   {
@@ -55,28 +59,37 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <div>
-      <h1 className="text-white text-2xl md:text-4xl font-bold mt-7 md:mt-0 py-8 md:py-15 text-center">
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.2 }}
+    >
+      <motion.h1
+        variants={itemVariants}
+        className="text-white text-2xl md:text-4xl font-bold mt-7 md:mt-0 py-8 md:py-15 text-center"
+      >
         Why Choose Us
-      </h1>
+      </motion.h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {reasons.map((reason) => (
-          <Card
-            key={reason.id}
-            className="bg-[#101817] hover:bg-[#151d1a] border border-[#1c2423] rounded-xl p-5 flex flex-col items-center gap-3"
-          >
-            <span
-              className={`${reason.bgColor} p-4 rounded-full flex items-center justify-center mb-2`}
-            >
-              {reason.icon && (
-                <reason.icon className="w-7 h-7 text-muted-foreground" />
-              )}
-            </span>
-            <h2 className="text-white text-lg font-semibold">{reason.title}</h2>
-            <p className="text-gray-400 text-center">{reason.description}</p>
-          </Card>
+          <motion.div key={reason.id} variants={itemVariants}>
+            <Card className="bg-[#101817] hover:bg-[#151d1a] border border-[#1c2423] rounded-xl p-5 flex flex-col items-center gap-3 h-full cursor-pointer transition-colors">
+              <span
+                className={`${reason.bgColor} p-4 rounded-full flex items-center justify-center mb-2`}
+              >
+                {reason.icon && (
+                  <reason.icon className="w-7 h-7 text-muted-foreground" />
+                )}
+              </span>
+              <h2 className="text-white text-lg font-semibold">
+                {reason.title}
+              </h2>
+              <p className="text-gray-400 text-center">{reason.description}</p>
+            </Card>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }

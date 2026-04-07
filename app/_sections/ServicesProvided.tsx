@@ -1,8 +1,12 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { containerVariants, itemVariants } from "@/lib/framer-animation";
 
 const servicesProvided = [
   {
@@ -39,34 +43,43 @@ const servicesProvided = [
 
 export default function ServicesProvided() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-20 md:mt-10">
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.2 }}
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-20 md:mt-10"
+    >
       {servicesProvided.map((service) => (
-        <Card
-          key={service.id}
-          className={`bg-[#0a2825] p-5 ${service.bgClass}`}
+        <motion.div 
+          key={service.id} 
+          variants={itemVariants}
+          className="h-full"
         >
-          <div className="rounded-xl border-2 border-[#27272a]">
-            <Image
-              src={service.coverPhoto}
-              alt={service.title}
-              width={400}
-              height={200}
-              className="object-cover rounded-xl"
-            />
-          </div>
-          <CardContent className="space-y-3 h-25 p-0">
-            <h3 className="text-xl font-bold text-white">{service.title}</h3>
-            <p className="text-[#a1a1aa]">{service.description}</p>
-          </CardContent>
-          <CardFooter className="p-0">
-            <Link href={service.url}>
-              <Button variant="link" className="text-white">
-                Learn More <ArrowRight />
-              </Button>
-            </Link>
-          </CardFooter>
-        </Card>
+          <Card className={`bg-[#0a2825] p-5 h-full flex flex-col ${service.bgClass}`}>
+            <div className="rounded-xl border-2 border-[#27272a]">
+              <Image
+                src={service.coverPhoto}
+                alt={service.title}
+                width={400}
+                height={200}
+                className="object-cover rounded-xl w-full"
+              />
+            </div>
+            <CardContent className="space-y-3 h-25 p-0 mt-5 grow">
+              <h3 className="text-xl font-bold text-white">{service.title}</h3>
+              <p className="text-[#a1a1aa]">{service.description}</p>
+            </CardContent>
+            <CardFooter className="p-0 mt-4">
+              <Link href={service.url}>
+                <Button variant="link" className="text-white p-0 h-auto">
+                  Learn More <ArrowRight className="ml-1 w-4 h-4" />
+                </Button>
+              </Link>
+            </CardFooter>
+          </Card>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 }
