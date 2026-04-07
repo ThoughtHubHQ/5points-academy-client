@@ -1,4 +1,5 @@
 "use client";
+
 import { AnimatedNumber } from "@/components/custom/animated-number";
 import { containerVariants, itemVariants } from "@/lib/framer-animation";
 import { motion } from "framer-motion";
@@ -22,12 +23,12 @@ export default function AboutUsStat() {
         <motion.div
           variants={itemVariants}
           key={index}
-          className="flex flex-col items-center"
+          className="flex flex-col items-center justify-start h-full text-center"
         >
-          <span className="text-2xl md:text-4xl font-bold text-white">
+          <span className="text-2xl md:text-4xl font-bold text-white leading-none">
             <AnimatedNumber value={stat.value} />
           </span>
-          <span className="text-xs md:text-base text-muted-foreground mt-2 uppercase">
+          <span className="text-xs md:text-base text-muted-foreground mt-3 uppercase">
             {stat.label}
           </span>
         </motion.div>
