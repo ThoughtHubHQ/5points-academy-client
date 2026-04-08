@@ -1,6 +1,12 @@
+"use client";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function CraftingCredit() {
+  const [logoSrc, setLogoSrc] = useState(
+    "https://cdn.thoughthubhq.com/th-logo.png",
+  );
+
   return (
     <div>
       <a
@@ -11,11 +17,12 @@ export default function CraftingCredit() {
         <div className="group relative flex items-center gap-4 text-xs tracking-tight sm:text-sm cursor-pointer hover:scale-110 transition-transform duration-500 after:content-[''] after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-500 after:ease-in-out after:bg-[#e7eacd]">
           <div className="shrink-0 pr-4 border-r border-neutral-200 transition-colors duration-300">
             <Image
-              src="https://cdn.thoughthubhq.com/th-logo.png"
+              src={logoSrc}
               alt="ThoughtHub HQ Logo"
               width={36}
               height={36}
               priority
+              onError={() => setLogoSrc("/logo/th-logo.png")}
             />
           </div>
 
