@@ -61,7 +61,7 @@ const footerData = {
 
 export default function Footer() {
   return (
-    <footer className="w-full border-t border-white/5 bg-[#0A0A0A] px-6 pt-24 pb-12 text-slate-400 sm:px-10 lg:px-20">
+    <footer className="w-full border-t border-white/5 bg-[#061110] px-6 pt-24 pb-12 text-slate-400 sm:px-10 lg:px-20 mt-15">
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-4 lg:gap-16">
           {/* Branding */}
@@ -207,8 +207,6 @@ export default function Footer() {
           <p className="text-sm text-slate-300 text-center md:text-left mb-4 md:mb-0">
             © {new Date().getFullYear()} - 5points Academy | All rights reserved
           </p>
-
-          {/* Credit: ThoughtHub */}
           <CraftingCredit />
         </div>
       </div>

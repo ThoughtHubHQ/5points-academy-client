@@ -41,7 +41,7 @@ export default function RootLayout({
       <body className="font-sans antialiased">
     
           <Toaster position="bottom-right" swipeDirections={["right"]} />
-          <main className="grow bg-[#070a0a]">
+          <main className="grow bg-[#061110]">
             <Header />
             {children}
             <Footer />

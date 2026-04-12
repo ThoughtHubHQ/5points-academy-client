@@ -1,4 +1,5 @@
 "use client";
+import { roxboroughCFHeavy } from "@/lib/font";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -27,11 +28,11 @@ export default function CraftingCredit() {
           </div>
 
           <div className="flex flex-col justify-center">
-            <span className="text-[10px] uppercase tracking-widest text-neutral-500 font-medium leading-none mb-1">
+            <span className="text-[10px] uppercase tracking-widest text-neutral-500 font-bold leading-none mb-1">
               Crafted by
             </span>
             <span className="flex flex-col text-lg font-bold text-[#e7eacd]">
-              <span>ThoughtHub</span>
+              <span className={roxboroughCFHeavy.className}>ThoughtHub</span>
             </span>
           </div>
         </div>
