@@ -50,7 +50,7 @@ export default function NotFound() {
         <Button 
           variant="outline"
           onClick={() => window.history.back()}
-          className="bg-[#0a2825] text-white font-bold rounded-xl py-6 px-8 hover:bg-[#0a2825]/80 hover:-translate-y-1 transition-all duration-300 border-2 border-[#36514f]"
+          className="bg-[#0a2825] text-white hover:text-white font-bold rounded-xl py-6 px-8 hover:bg-[#0a2825]/80 hover:-translate-y-1 transition-all duration-300 border-2 border-[#36514f]"
         >
           <ArrowLeft className="mr-2 w-5 h-5" /> Go Back
         </Button>
