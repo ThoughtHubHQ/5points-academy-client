@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
@@ -207,7 +208,7 @@ export default function Footer() {
           <p className="text-sm text-slate-300 text-center md:text-left mb-4 md:mb-0">
             © {new Date().getFullYear()} - 5points Academy | All rights reserved
           </p>
-          <CraftingCredit />
+          <CraftingCredit/>
         </div>
       </div>
     </footer>

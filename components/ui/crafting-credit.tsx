@@ -28,7 +28,7 @@ export default function CraftingCredit() {
           </div>
 
           <div className="flex flex-col justify-center">
-            <span className="text-[10px] uppercase tracking-widest text-neutral-500 font-bold leading-none mb-1">
+            <span className="text-[10px] uppercase tracking-widest text-neutral-500 font-extrabold leading-none mb-0.5">
               Crafted by
             </span>
             <span className="flex flex-col text-lg font-bold text-[#e7eacd]">
