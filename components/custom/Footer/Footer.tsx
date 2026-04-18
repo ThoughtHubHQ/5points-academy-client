@@ -70,7 +70,7 @@ export default function Footer() {
             <div className="flex items-center gap-2.5">
               <Link href="/">
                 <Image
-                  src="/logo/logo.png"
+                  src="/logo/logo-sq.png"
                   alt="Logo"
                   width={150}
                   height={40}
